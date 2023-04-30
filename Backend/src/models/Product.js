@@ -1,21 +1,25 @@
 import { Schema, model, version } from "mongoose";
 
-const restaurantSchema = new Schema(
+const productSchema = new Schema(
     {
-        nombre: {
+        name: {
             type: String,
             required: true,
             unique: true,
             trim: true
         },
-        direccion: {
-            type: String,
-            required: true,
-            trim: true
-        },
-        categoria: {
+        description: {
             type: String,
             required: true
+        },
+        categories: {
+            type: String,
+            required: true
+        },
+        price: {
+            type: Number,
+            required: true,
+            min: 1000
         },
     },
     {
@@ -24,4 +28,4 @@ const restaurantSchema = new Schema(
     }
 );
 
-export default model('Restaurant', restaurantSchema);
+export default model('Product', productSchema);
