@@ -1,0 +1,45 @@
+<form action="/inicio" method="post">
+  <h3>Iniciar sesión</h3>
+  <div>
+    <label for="correo">Correo:</label>
+    <input type="text" name="correo" id="correo" />
+  </div>
+  <div>
+    <label for="contraseña">Contraseña:</label>
+    <input type="text" name="contraseña" id="contraseña" />
+  </div>
+</form>
+
+<form action="/registro" method="post">
+
+  <h3>Registrate</h3>
+  <div>
+    <label for="correo">Correo:</label>
+    <input type="text" name="correo" id="correo" />
+  </div>
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" />
+  </div>
+  <div>
+    <label for="contraseña">Contraseña:</label>
+    <input type="text" name="contraseña" id="contraseña" />
+  </div>
+  <div>
+    <label for="numero-celular">Numero de celular:</label>
+    <input type="text" name="numero-celular" id="num-celular" />
+  </div>
+  <div>
+    <label for="direccion">Dirección:</label>
+    <input type="text" name="direccion" id="direccion" />
+  </div>
+  <label for="tipo-cuenta">tipo de cuenta:</label>
+  <div>
+    <input type="radio" name="transporte" value="1" />Cliente
+    <br />
+    <input type="radio" name="transporte" value="2" />Domiciliario
+    <br />
+    <input type="radio" name="transporte" value="3" />Administrador de restaurante
+  </div>
+  <button>Crear Cuenta</button>
+</form>
