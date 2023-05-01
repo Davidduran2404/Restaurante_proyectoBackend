@@ -1,4 +1,5 @@
-<form action="/producto/add" method="post">
+<h1>Restaurante: {{restaurant.nombre}}</h1>
+<form action="/producto/add/{{restaurant._id}}" method="post">
 
   <h3>Agregar Productos</h3>
   <div>
@@ -14,7 +15,7 @@
     <input type="text" name="categories" id="categories" />
   </div>
   <div>
-    <label for="price">Descripción:</label>
+    <label for="price">Valor:</label>
     <input type="number" name="price" id="price" />
   </div>
   <button>Agregar Producto</button>

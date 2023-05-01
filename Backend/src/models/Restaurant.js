@@ -17,6 +17,9 @@ const restaurantSchema = new Schema(
             type: String,
             required: true
         },
+        popularidad:{
+            type: Number,
+        },
         propietario:{
             type: String,
             required: true

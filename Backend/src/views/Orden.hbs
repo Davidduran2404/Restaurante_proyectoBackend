@@ -1,0 +1,36 @@
+<h1>Productos del restaurante: {{restaurant.nombre}}</h1>
+<table>
+  <thead>
+    <tr>
+      <th>N.</th>
+      <th>Nombre</th>
+      <th>descripción</th>
+      <th>categoria</th>
+      <th>Valor</th>
+      <th>Cantidad</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each products}}
+      <tr>
+        <td>{{@index}}</td>
+        <td>{{name}}</td>
+        <td>{{description}}</td>
+        <td>{{categories}}</td>
+        <td>{{price}}</td>
+        <td>
+          <input
+            type="number"
+            id="cantidad"
+            name="cantidad"
+            min="1"
+            max="5"
+            value="1"
+          />
+          <a href="#">Agregar al carrito</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

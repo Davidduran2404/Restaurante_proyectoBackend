@@ -1,10 +1,9 @@
 <h1>Administrador de restaurante</h1>
-<form action="/Restaurant/register" method="post">
+<form action="/Restaurant/register/{{user.nombre}}" method="post">
 
   <h3>Registrar Restaurante</h3>
   <div>
     <label for="propietario">Propietario: {{user.nombre}}</label>
-    <input type="text" name="propietario" id="propietario" />
   </div>
   <div>
     <label for="nombre">Nombre:</label>

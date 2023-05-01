@@ -1,12 +1,10 @@
-<h1>cliente: {{user.nombre}}</h1>
+<h1>Propietario: {{user.nombre}}</h1>
 <table>
   <thead>
     <tr>
       <th>N.</th>
       <th>Nombre</th>
       <th>Dirección</th>
-      <th>categoria</th>
-      <th></th>
     </tr>
   </thead>
 
@@ -16,9 +14,8 @@
         <td>{{@index}}</td>
         <td>{{nombre}}</td>
         <td>{{direccion}}</td>
-        <td>{{categoria}}</td>
         <td>
-          <a href="/Restaurant/pedido/{{_id}}">Pedir</a>
+          <a href="/Restaurant/{{_id}}">Ingresar</a>
         </td>
       </tr>
     {{/each}}

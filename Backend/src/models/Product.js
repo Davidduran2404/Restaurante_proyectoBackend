@@ -2,6 +2,7 @@ import { Schema, model, version } from "mongoose";
 
 const productSchema = new Schema(
     {
+        restaurante: String,
         name: {
             type: String,
             required: true,
