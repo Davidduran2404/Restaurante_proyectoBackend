@@ -20,9 +20,32 @@ router.get("/2", async (req, res) => {
 
 router.post("/registro", async (req, res) => {
   const user = User(req.body);
-  console.log(user);
   await user.save();
   res.redirect("/2");
+});
+
+router.post("/Restaurant/register", async (req, res) => {
+  const restaurant = Restaurant(req.body);
+  await restaurant.save();
+  res.render("Admin_restaurant");
+});
+
+router.post("/producto/add", async (req, res) => {
+  const product = Product(req.body);
+  await product.save();
+  res.render("Admin_restaurant");
+});
+
+router.get("/inicio", async (req, res) => {
+  const user = await User.find({ correo: req.query.correo });
+  if (user[0].tipoCuenta == "Administrador de Restaurante") {
+    res.render("Reg_restaurant", {user: user});
+  } else if (user[0].tipoCuenta == "Domiciliario") {
+    res.render("Domiciliario");
+  } else {
+    const restaurants = await Restaurant.find().lean();
+    res.render("Client", { restaurants: restaurants });
+  }
 });
 
 router.get("/about", (req, res) => {

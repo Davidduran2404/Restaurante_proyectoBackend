@@ -1,0 +1,27 @@
+<h1>cliente</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>N.</th>
+      <th>Nombre</th>
+      <th>Dirección</th>
+      <th>categoria</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each restaurants}}
+      <tr>
+        <td>{{@index}}</td>
+        <td>{{nombre}}</td>
+        <td>{{direccion}}</td>
+        <td>{{categoria}}</td>
+        <td>
+          <a href="#">Pedir</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

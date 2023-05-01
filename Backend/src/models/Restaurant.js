@@ -17,6 +17,10 @@ const restaurantSchema = new Schema(
             type: String,
             required: true
         },
+        propietario:{
+            type: String,
+            required: true
+        }
     },
     {
         timestamps: true,//para remplazar las propiuedades created y updated

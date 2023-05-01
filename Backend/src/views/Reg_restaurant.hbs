@@ -1,0 +1,23 @@
+<h1>Administrador de restaurante</h1>
+<form action="/Restaurant/register" method="post">
+
+  <h3>Registrar Restaurante</h3>
+  <div>
+    <label for="propietario">Propietario: {{user.nombre}}</label>
+    <input type="text" name="propietario" id="propietario" />
+  </div>
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" />
+  </div>
+  <div>
+    <label for="direccion">Dirección:</label>
+    <input type="text" name="direccion" id="direccion" />
+  </div>
+  <div>
+    <label for="categoria">Que tipo de comida sirves:</label>
+    <input type="text" name="categoria" id="categoria" />
+  </div>
+  
+  <button>Abrir Restaurante</button>
+</form>

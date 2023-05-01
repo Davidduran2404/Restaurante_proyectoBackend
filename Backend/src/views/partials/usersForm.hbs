@@ -1,0 +1,33 @@
+<form action="/registro" method="post">
+
+  <h3>Registrate</h3>
+  <div>
+    <label for="correo">Correo:</label>
+    <input type="text" name="correo" id="correo" />
+  </div>
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" />
+  </div>
+  <div>
+    <label for="contrasena">Contraseña:</label>
+    <input type="text" name="contrasena" id="contrasena" />
+  </div>
+  <div>
+    <label for="numCelular">Numero de celular:</label>
+    <input type="text" name="numCelular" id="numCelular" />
+  </div>
+  <div>
+    <label for="direccion">Dirección:</label>
+    <input type="text" name="direccion" id="direccion" />
+  </div>
+  <label for="tipoCuenta">tipo de cuenta:</label>
+  <div>
+    <input type="radio" name="tipoCuenta" value="Cliente" />Cliente
+    <br />
+    <input type="radio" name="tipoCuenta" value="Domiciliario" />Domiciliario
+    <br />
+    <input type="radio" name="tipoCuenta" value="Administrador de Restaurante" />Administrador de restaurante
+  </div>
+  <button>Crear Cuenta</button>
+</form>
