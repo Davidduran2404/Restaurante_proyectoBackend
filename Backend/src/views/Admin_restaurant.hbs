@@ -1,5 +1,10 @@
 <h1>Restaurante: {{restaurant.nombre}}</h1>
-<form action="/producto/add/{{restaurant._id}}" method="post">
+<h4>Dirección: {{restaurant.direccion}}</h4>
+<h4>categoria: {{restaurant.categoria}}</h4>
+<h4>Popularidad: {{restaurant.popularidad}}</h4>
+<a href="/editRestaurant/{{restaurant._id}}">editar Restaurante</a>
+
+<form action="/producto/add/{{restaurant._id}}/{{user._id}}" method="post">
 
   <h3>Agregar Productos</h3>
   <div>
@@ -20,3 +25,32 @@
   </div>
   <button>Agregar Producto</button>
 </form>
+<h1>Productos del restaurante: {{restaurant.nombre}}</h1>
+<table>
+  <thead>
+    <tr>
+      <th>N.</th>
+      <th>Nombre</th>
+      <th>descripción</th>
+      <th>categoria</th>
+      <th>Valor</th>
+      <th>Cantidad</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each products}}
+      <tr>
+        <td>{{@index}}</td>
+        <td>{{name}}</td>
+        <td>{{description}}</td>
+        <td>{{categories}}</td>
+        <td>{{price}}</td>
+        <td>
+          <a href="/deleteProduct/{{_id}}">borrar</a>
+          <a href="/editProduct/{{_id}}">modificar</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

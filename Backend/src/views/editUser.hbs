@@ -1,0 +1,23 @@
+<form action="/editUser/{{user._id}}" method="post">
+  <div>
+    <label for="correo">Correo:</label>
+    <input type="text" name="correo" id="correo" value="{{user.correo}}" />
+  </div>
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" value="{{user.nombre}}" />
+  </div>
+  <div>
+    <label for="contrasena">Contraseña:</label>
+    <input type="text" name="contrasena" id="contrasena" value="{{user.contrasena}}"/>
+  </div>
+  <div>
+    <label for="numCelular">Numero de celular:</label>
+    <input type="text" name="numCelular" id="numCelular" value="{{user.numCelular}}"/>
+  </div>
+  <div>
+    <label for="direccion">Dirección:</label>
+    <input type="text" name="direccion" id="direccion" value="{{user.direccion}}" />
+  </div>
+  <button>Actualizar Datos</button>
+</form>

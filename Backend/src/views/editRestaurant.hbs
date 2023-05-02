@@ -1,0 +1,18 @@
+<form action="/editRestaurant/{{restaurant._id}}" method="post">
+
+  <h3>Actualizar Restaurante</h3>
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" value="{{restaurant.nombre}}"/>
+  </div>
+  <div>
+    <label for="direccion">Dirección:</label>
+    <input type="text" name="direccion" id="direccion" value="{{restaurant.direccion}}" />
+  </div>
+  <div>
+    <label for="categoria">Que tipo de comida sirves:</label>
+    <input type="text" name="categoria" id="categoria" value="{{restaurant.categoria}}"/>
+  </div>
+  
+  <button>Modificar</button>
+</form>
